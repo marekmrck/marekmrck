@@ -4,7 +4,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>ReadStack</title>
+    <title>Wypok</title>
     <%@ include file="../segments/stylesheets.jspf" %>
 </head>
 <body>
