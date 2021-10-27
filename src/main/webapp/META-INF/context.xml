@@ -1,0 +1,21 @@
+<Context>
+    <Resource name="jdbc/wypok"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              type="javax.sql.DataSource"
+              username="root"
+              password="admin"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/wypok?serverTimezone=UTC"/>
+    <Realm className="org.apache.catalina.realm.DataSourceRealm"
+           dataSourceName="jdbc/wypok"
+           localDataSource="true"
+           userTable="user"
+           userNameCol="username"
+           userCredCol="password"
+           userRoleTable="user_role"
+           roleNameCol="role_name">
+        <CredentialHandler
+                className="org.apache.catalina.realm.MessageDigestCredentialHandler"
+                algorithm="SHA-256" />
+    </Realm>
+</Context>
